@@ -1,7 +1,9 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
+%\usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{csquotes}
 
 % 20 minutes presentation time
 
@@ -30,7 +32,7 @@
 \begin{itemize}
 \item L'inégalité d'emploi entre hommes et femmes dans les métiers STEM est une évidence.
 \item Les origines de cet inégalité (sur tout concernant le part joué par la scolarité) sont le sujet de beaucoup d'études.
-\item Notre projet propose d'investiguer une seule cause potentielle parmi beaucoup -- l'interaction enter enseignant et élève.
+\item Notre projet propose d'investiguer une seule cause potentielle parmi beaucoup -- l'interaction entre enseignant et élève.
 \end{itemize}
 \end{frame}
 
@@ -136,9 +138,61 @@ Version B est pareil avec Zoe remplacé par Nathan.
 \begin{frame}
   \frametitle{Analyse}
   \begin{itemize}
-  \item   ss
+  \item Peu d'observation -- on s'intéresse à la construction du questionnaire.
+  \item 4 questions (3, 4, 5, 14) ont toutes les réponses pareilles -- à refaire
+  \item 4 questions (2, 7, 8, 15) ont 6 contre 1 -- à reconsiderer
+  \item 7 questions (1, 6, 9, 10, 11, 12, 13) ont des réponses bien partagés
+    entre les deux choix -- Questions utiles
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Les ``mauvaises'' questions}
+  \begin{itemize}
+  \item Quoi dire?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les ``bonnes'' questions}
+  \begin{itemize}
+  \item Une répartion assez équilibré entre les deux réponses proposées.
+  \item 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Deux exemples}
+  \begin{itemize}
+  \item Question 1:
+    \begin{enumerate}
+    \item Vous renvoyez Samantha lire le protocole. 
+    \item Vous accompagnez Samantha à sa place pour regarder le protocole ensemble. 
+    \end{enumerate}
+  \item Version A (Samantha) 3/3 pour réponse 2.
+  \item Version B (Arnaud) 3/4 pour réponse 1.
+  \item Inférence: Attente que les garçons se débrouillent mais que les filles ont
+    besoin d'aide?\footnote{Pas statistiquement significant} 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Deux exemples}
+  \begin{itemize}
+  \item Question 13:
+    \begin{enumerate}
+    \item «OK, s’ils montent ensemble, ils s’ajoutent; qu’est-ce qui détermine
+      s’ils montent ensemble ou pas?
+    \item «OK, donc ce que vous décrivez est l’interférence entre deux ondes.
+      Quelle est la condition pour que l’interférence soit constructive?»   
+      \end{enumerate}
+  \item Version A (Laura) 2/2 pour réponse 1.
+  \item Version B (Martin) 3/4 pour réponse 2.
+  \item Inférence: posture de l'enseignant accompagnant pour les filles,
+    analytique pour les garçons?\footnote{Pas statistiquement significant} 
+  \end{itemize}
+\end{frame}
+
 
 %% Conclusions
 \section{Conclusions}
@@ -165,6 +219,23 @@ Version B est pareil avec Zoe remplacé par Nathan.
 %% Bibliographie
 \begin{frame}
 \frametitle{Bibliographie}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hypothesis test}
+  \begin{description}
+  \item[$H_0$] La proportion des répondants ayant choisi la réponse 1 est
+                pareille dans les questionnaires A et B: $p_A = p_B$. 
+  \item[$H_A$] La proportion des répondants ayant choisi la réponse
+                1 n’est pas  pareille dans les questionnaires A et B: $p_A \ne p_B$.
+  \end{description}
+  Où $p_{A/B}  = \frac{n_{1A/B}}{n_{1A/B}  + n_{2A/B}}$.
+
+  \[
+  Z = \frac{(p_A-p_B) - 0}{\sigma} ,\quad
+  \sigma = \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} 
+  \]
+  Constrainte: $n_{A/B} \cdot p_{A/B} > 5$, $n_{A/B} \cdot (1-p_{A/B}) > 5$ 
 \end{frame}
 
 \end{document}
