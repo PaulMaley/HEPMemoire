@@ -52,7 +52,7 @@ Y a-t-il une différentiation dans les interactions enseignants-élèves entre l
 \frametitle{Méthodologie standarde}
 \begin{itemize}
 \item La méthodologie ``standarde'' pour chercher une telle différence serait d'enregistrer des séance de classe et d'analyser
-les interactions selon un cadre théorique. La théorie des actions didactiques conjoints (TADC) semble être un bon choix.
+les interactions selon un cadre théorique. La théorie des actions didactiques conjoints (TACD) semble être un bon choix.
 \item Une telle analyse permettrait d'observer des différences mais pour en venir à la raison d'être de ces différences il faudrait articuler ces obsevations avec des entretiens enseignants.
 \item Pour comprendre si ces différences sans généralisés ou des cas isolés il en faudra beaucoup de vidéos.
 \item Cette approche est limitée par le temps qu'il faut pour analyser des séquences vidéos mais aussi par des questions
@@ -117,6 +117,17 @@ Version B est pareil avec Zoe remplacé par Nathan.
   observe le temps accordé aux élèves pour répondre et en particulier
   pour voir si c'est égal entre garçons et filles.
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{La théorie des actions cojointe en didatique (TACD)}
+  \begin{itemize}
+    \item Une théorie avec laquelle un checheur peut analyser des interactions
+      dans la classe.
+    \item Nous l'avons utiliser pour imaginer comment on peut varier
+      les réponse proposées dans chaque question.
+      \item Cette élaboration des questions est loin d'être facile.
+    \end{itemize}
 \end{frame}
 
 %% Survey results
@@ -196,9 +207,9 @@ Version B est pareil avec Zoe remplacé par Nathan.
 
 %% Conclusions
 \section{Conclusions}
-\subsection{Conclusions d'étude pilote}
+\subsection{Conclusions de l'étude pilote}
 \begin{frame}
-\frametitle{Conclusions d'étude pilote}
+\frametitle{Conclusions de l'étude pilote}
   \begin{itemize}
   \item Les résultats nous donne confiance que cette approche pourrait fonctionner.
   \item Nous voyons que certains questions ne sont pas bonnes - tout le monde
@@ -210,7 +221,12 @@ Version B est pareil avec Zoe remplacé par Nathan.
 \begin{frame}
   \frametitle{La suite}
   \begin{itemize}
-  \item   
+  \item Nous pensons que cette approche pourrait être reprise pas quelqu'un(e).
+  \item Remplacer ou modifier les questions qui ne sont pas bonnes.
+  \item Produire plus de questions.
+    \item (?) Utiliser de manière plus explicite la TACD
+  \item Analyser aussi en terme du sexe et expérience de l'enseignant(e).
+    \item Si des biaises sont observés articuler les résultats avec des entretiens.
   \end{itemize}
 \end{frame}
 
@@ -222,7 +238,7 @@ Version B est pareil avec Zoe remplacé par Nathan.
 \end{frame}
 
 \begin{frame}
-  \frametitle{Hypothesis test}
+  \frametitle{Hypothesis test on $p_A = p_B $}
   \begin{description}
   \item[$H_0$] La proportion des répondants ayant choisi la réponse 1 est
                 pareille dans les questionnaires A et B: $p_A = p_B$. 
@@ -237,5 +253,47 @@ Version B est pareil avec Zoe remplacé par Nathan.
   \]
   Constrainte: $n_{A/B} \cdot p_{A/B} > 5$, $n_{A/B} \cdot (1-p_{A/B}) > 5$ 
 \end{frame}
+
+\begin{frame}
+  \frametitle{Hypothesis test of $\chi^2$ -- I}
+Exemple -- Analyse de Q1:
+
+
+\begin{center}
+\begin{tabular}{c|cc|c}
+   & \multicolumn{2}{c|}{Version} &  \\ 
+  Réponse  & A & B & Totale \\ \hline
+  1 & 0 & 3 & 3 \\
+  2 & 3 & 1 & 4 \\ \hline
+  Totale & 3 & 4 & 7
+\end{tabular}
+\end{center}
+
+\begin{description}
+\item [$e_{ij}$] Valeur dans le cellule ${ij}$ basé sur indépendence entre
+  {\bf version} et {\bf réponse}.
+\item [$o_{ij}$] Valeur observé dans le cellule ${ij}$.
+\end{description}
+
+par exemple $e_{11} = \frac{3}{7} \cdot \frac{3}{7}$
+\end{frame}
+
+\begin{frame}
+\frametitle{Hypothesis test of $\chi^2$ -- II}
+
+Calculer le statistique:
+\[
+\chi^2 = \sum_{ij} \frac{(e_{ij}-o_{ij})^2}{e_{ij}}
+\]
+
+  \begin{description}
+  \item[$H_0$] Les deux variables sont independentes. 
+  \item[$H_A$] Les deux variables ne sont pas independentes.
+  \end{description}
+
+  Choisir un niveau de confiance pour obtenir $\chi^2_{\text{critique}}$ et comparer avec
+  la valeur de $\chi^2$ calculée (nombre de degrés de liberté: 1). 
+\end{frame}
+
 
 \end{document}
